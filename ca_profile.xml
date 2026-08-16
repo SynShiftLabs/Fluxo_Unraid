@@ -1,0 +1,16 @@
+<CommunityApplications>
+  <!-- Required profile -->
+  <Profile>
+    Unraid Community Applications template for **Fluxo**, a personal finance / household
+    budgeting app (ASP.NET Core backend with a built-in React frontend). Runs as a single Docker
+    container and needs an external PostgreSQL database.
+
+    This repository only contains the Unraid template metadata (MIT-licensed) — the Fluxo
+    application itself is closed-source and published as a container image only, at
+    ghcr.io/synshiftlabs/fluxo.
+
+    Support: open an issue in this repository.
+  </Profile>
+  <!-- Optional icon -->
+  <Icon>https://raw.githubusercontent.com/SynShiftLabs/Fluxo_Unraid/main/icon.svg</Icon>
+</CommunityApplications>

@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Fluxo</Name>
+  <Repository>ghcr.io/synshiftlabs/fluxo:latest</Repository>
+  <Registry>https://github.com/SynShiftLabs/Fluxo/pkgs/container/fluxo</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/SynShiftLabs/Fluxo_Unraid/issues</Support>
+  <Project>https://github.com/SynShiftLabs/Fluxo_Unraid</Project>
+  <Overview>Fluxo – Persönliche Haushaltsbuch-App. ASP.NET Core Backend mit integriertem React-Frontend. Benötigt eine externe PostgreSQL-Datenbank.</Overview>
+  <Category>Productivity: Finance:</Category>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/SynShiftLabs/Fluxo_Unraid/main/templates/fluxo.xml</TemplateURL>
+  <ReadMe>https://raw.githubusercontent.com/SynShiftLabs/Fluxo_Unraid/main/README.md</ReadMe>
+  <Icon>https://raw.githubusercontent.com/SynShiftLabs/Fluxo_Unraid/main/icon.svg</Icon>
+  <License>Proprietary</License>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <DateInstalled></DateInstalled>
+
+  <!-- Web-Port -->
+  <Config
+    Name="Web UI Port"
+    Target="80"
+    Default="80"
+    Mode="tcp"
+    Description="Port über den Fluxo im Browser erreichbar ist. Standard 80 = kein Port in der URL nötig."
+    Type="Port"
+    Display="always"
+    Required="true"
+    Mask="false">80</Config>
+
+  <!-- App Data Volume -->
+  <Config
+    Name="App Daten"
+    Target="/data"
+    Default="/mnt/user/appdata/fluxo"
+    Description="Hier werden die automatisch generierten Secrets gespeichert."
+    Type="Path"
+    Display="always"
+    Required="true"
+    Mask="false">/mnt/user/appdata/fluxo</Config>
+
+  <!-- Datenbank -->
+  <Config
+    Name="Datenbank Host"
+    Target="DB_HOST"
+    Default=""
+    Description="IP-Adresse oder Hostname des PostgreSQL-Containers, z.B. 192.168.178.115"
+    Type="Variable"
+    Display="always"
+    Required="true"
+    Mask="false"></Config>
+
+  <Config
+    Name="Datenbank Port"
+    Target="DB_PORT"
+    Default="5432"
+    Description="PostgreSQL Port. Standard: 5432"
+    Type="Variable"
+    Display="always"
+    Required="true"
+    Mask="false">5432</Config>
+
+  <Config
+    Name="Datenbank Name"
+    Target="DB_NAME"
+    Default="fluxo"
+    Description="Name der Datenbank."
+    Type="Variable"
+    Display="always"
+    Required="true"
+    Mask="false">fluxo</Config>
+
+  <Config
+    Name="Datenbank Benutzer"
+    Target="DB_USER"
+    Default=""
+    Description="PostgreSQL Benutzername."
+    Type="Variable"
+    Display="always"
+    Required="true"
+    Mask="false"></Config>
+
+  <Config
+    Name="Datenbank Passwort"
+    Target="DB_PASSWORD"
+    Default=""
+    Description="PostgreSQL Passwort."
+    Type="Variable"
+    Display="always"
+    Required="true"
+    Mask="true"></Config>
+
+
+</Container>
