@@ -34,6 +34,7 @@
     Name="App Daten"
     Target="/data"
     Default="/mnt/user/appdata/fluxo"
+    Mode="rw"
     Description="Hier werden die automatisch generierten Secrets gespeichert."
     Type="Path"
     Display="always"
