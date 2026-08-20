@@ -12,7 +12,7 @@
   <WebUI>http://[IP]:[PORT:80]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/SynShiftLabs/Fluxo_Unraid/main/templates/fluxo.xml</TemplateURL>
   <ReadMe>https://raw.githubusercontent.com/SynShiftLabs/Fluxo_Unraid/main/README.md</ReadMe>
-  <Icon>https://raw.githubusercontent.com/SynShiftLabs/Fluxo_Unraid/main/icon.svg</Icon>
+  <Icon>https://raw.githubusercontent.com/SynShiftLabs/Fluxo_Unraid/main/icon.png</Icon>
   <License>Proprietary</License>
   <ExtraParams>--restart=unless-stopped</ExtraParams>
   <DateInstalled></DateInstalled>
